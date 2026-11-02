@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polyscope"
+version = "0.1.0"
+description = "Deterministic, evidence-first container and programming-language identification."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "gamAI"}]
+keywords = ["binary-analysis", "language-detection", "elf", "pe", "wasm", "forensics"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Security",
+  "Topic :: Software Development :: Disassemblers",
+]
+
+[project.scripts]
+polyscope = "polyscope.report:main"
+
+[tool.setuptools]
+packages = ["polyscope"]
